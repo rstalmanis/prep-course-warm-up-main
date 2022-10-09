@@ -9,3 +9,4 @@ function addNumbers(a:number, b:number, c:number) :number {
 
 const result = addNumbers(1, 3, 4);
 console.log(result); // Expected output: 8
+// Done
