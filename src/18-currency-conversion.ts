@@ -8,7 +8,10 @@ export {};
  */
 
 // You are allowed to change only this function
-function convertToUSD() {}
+function convertToUSD(input: number): string {
+    const rate: number = 1.4 * input
+    return rate.toFixed(2)
+}
 
 const product = "You don't know JS";
 const price = 19.99;
@@ -23,3 +26,4 @@ console.log("Price: $" + priceInUSD);
     > Price: $27.99
 
 */
+//done

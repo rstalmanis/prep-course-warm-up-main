@@ -9,7 +9,11 @@ export {};
  */
 
 // You are allowed to change only this function
-function formatCurrency() {}
+function formatCurrency(some: number): string {
+  let str:string = `£${some.toFixed(2)}` 
+  return str
+
+}
 
 function calculateSalesTax(price: number) {
   return price * 0.21;
@@ -32,3 +36,4 @@ console.log("Total: " + formatCurrency(price + salesTax));
     > Total: £24.19
 
 */
+//done

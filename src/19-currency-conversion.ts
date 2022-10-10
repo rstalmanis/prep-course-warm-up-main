@@ -13,25 +13,37 @@ export {};
  * You are allowed to create your own functions
  * and use them in place of convertToUSD() and convertToBRL()
  */
+ 
+function onePercentFee(price: number):number{
+    const newPrice: number = price / 100 * 1 + price
+    return newPrice
+}
+//const newPr: number = onePercentFee 
+// // You are allowed to change this function
+ function convertToUSD(newPrgt: number): string {
+      const rate: number =  newPrgt * 0.97 
+      return rate.toFixed(2)
+  }
+// // You are allowed to change this function
+ function convertToBRL(newPrice: number):string {
+     const rateBRL: number = newPrice * 5.12
+     return rateBRL.toFixed(2)
+ }
 
-// You are allowed to change this function
-function convertToUSD(price) {}
-// You are allowed to change this function
-function convertToBRL(price) {}
+ const product = "You don't know JS";
+ const price: number = 12.5;
+ const priceInUSD = convertToUSD(onePercentFee(price));
+ const priceInBRL = convertToBRL(onePercentFee(price));
 
-const product = "You don't know JS";
-const price = 12.5;
-const priceInUSD = convertToUSD(price);
-const priceInBRL = convertToBRL(price);
+ console.log("Product: " + product);
+ console.log("Price: $" + priceInUSD);
+ console.log("Price: R$" + priceInBRL);
 
-console.log("Product: " + product);
-console.log("Price: $" + priceInUSD);
-console.log("Price: R$" + priceInBRL);
+// /* Expected output:
 
-/* Expected output:
+//     > Product: You don't know JS
+//     > Price: $?
+//     > Price: R$?
 
-    > Product: You don't know JS
-    > Price: $?
-    > Price: R$?
-
-*/
+// */
+//done
